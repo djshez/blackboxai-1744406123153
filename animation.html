@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Animation - BioMetrix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        canvas {
+            background: linear-gradient(to bottom, #000000, #1a1a2e);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black bg-opacity-80 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="font-orbitron text-2xl font-bold text-blue-500">
+                    <i class="fas fa-dna mr-2"></i>BioMetrix
+                </div>
+                <div class="space-x-6">
+                    <a href="index.html" class="text-gray-300 hover:text-blue-400 transition-colors">Home</a>
+                    <a href="animation.html" class="text-blue-500 hover:text-blue-400 transition-colors">Animation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <noscript>
+        <div class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
+            <div class="text-center p-8 bg-gray-800 rounded-lg">
+                <i class="fas fa-exclamation-triangle text-yellow-500 text-4xl mb-4"></i>
+                <h2 class="text-xl font-bold mb-4">JavaScript Required</h2>
+                <p>Please enable JavaScript to view this animation.</p>
+            </div>
+        </div>
+    </noscript>
+
+    <!-- Main Content -->
+    <div class="min-h-screen pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Canvas Container -->
+                <div class="lg:w-3/4">
+                    <div class="bg-gray-900 rounded-lg p-4 shadow-xl">
+                        <canvas id="dnaCanvas" class="w-full rounded-lg">
+                            Your browser does not support the canvas element.
+                        </canvas>
+                    </div>
+                </div>
+
+                <!-- Control Panel -->
+                <div class="lg:w-1/4">
+                    <div class="bg-gray-900 rounded-lg p-6 shadow-xl">
+                        <h2 class="font-orbitron text-xl font-bold mb-6 text-blue-500">Controls</h2>
+                        
+                        <!-- Animation Controls -->
+                        <div class="space-y-6">
+                            <div class="flex justify-center space-x-4">
+                                <button id="playBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition-colors">
+                                    <i class="fas fa-play mr-2"></i>Play
+                                </button>
+                                <button id="pauseBtn" class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-2 rounded-full transition-colors">
+                                    <i class="fas fa-pause mr-2"></i>Pause
+                                </button>
+                            </div>
+                            
+                            <div>
+                                <button id="resetBtn" class="w-full bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full transition-colors">
+                                    <i class="fas fa-redo mr-2"></i>Reset
+                                </button>
+                            </div>
+
+                            <!-- Speed Control -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-300">Animation Speed</label>
+                                <input type="range" id="speedControl" min="1" max="10" value="5" 
+                                    class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                                <div class="flex justify-between text-xs text-gray-400">
+                                    <span>Slow</span>
+                                    <span>Fast</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Info Section -->
+                        <div class="mt-8 p-4 bg-gray-800 rounded-lg">
+                            <h3 class="font-orbitron text-lg font-bold mb-3 text-blue-400">About</h3>
+                            <p class="text-sm text-gray-300 leading-relaxed">
+                                This visualization demonstrates the dynamic growth of neurological biometric DNA strands. 
+                                Watch as the double helix structure evolves and responds to various biological parameters.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
