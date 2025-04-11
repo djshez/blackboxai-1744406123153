@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Biometric Visualization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .bg-neural {
+            background-image: url('https://images.pexels.com/photos/3825573/pexels-photo-3825573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black bg-opacity-80 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="font-orbitron text-2xl font-bold text-blue-500">
+                    <i class="fas fa-dna mr-2"></i>BioMetrix
+                </div>
+                <div class="space-x-6">
+                    <a href="index.html" class="text-blue-500 hover:text-blue-400 transition-colors">Home</a>
+                    <a href="animation.html" class="text-gray-300 hover:text-blue-400 transition-colors">Animation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-neural min-h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <h1 class="font-orbitron text-5xl md:text-7xl font-bold mb-8 text-blue-500">
+                    Neural DNA Visualization
+                </h1>
+                <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto text-gray-300">
+                    Experience the fascinating evolution of neurological biometric DNA strands through our cutting-edge visualization technology.
+                </p>
+                <a href="animation.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300 transform hover:scale-105">
+                    <i class="fas fa-play-circle mr-2"></i>Launch Animation
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <i class="fas fa-dna text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="font-orbitron text-xl font-bold mb-4">Dynamic Growth</h3>
+                    <p class="text-gray-400">Watch as DNA strands evolve and grow in real-time simulation.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-sliders-h text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="font-orbitron text-xl font-bold mb-4">Interactive Controls</h3>
+                    <p class="text-gray-400">Adjust animation speed and parameters in real-time.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-brain text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="font-orbitron text-xl font-bold mb-4">Neural Integration</h3>
+                    <p class="text-gray-400">Visualize the connection between DNA and neural patterns.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
